@@ -52,10 +52,8 @@ class Queue(object):
             >>> q.length
             3
         """
-
-        # FIXME
-
-        pass
+        #P.S. the above docstring for q.length should be q.length() to return length and not the object
+        self._list.append(item)
 
     def peek(self):
         """Return but don't remove the first item in the queue.
@@ -71,7 +69,5 @@ class Queue(object):
             >>> q
             <Queue ['buy flight', 'pack', 'enjoy vacation']>
         """
+        return self._list[0]
 
-        # FIXME
-
-        pass

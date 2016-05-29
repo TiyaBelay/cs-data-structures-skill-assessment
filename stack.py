@@ -76,9 +76,7 @@ class Stack(object):
             3
         """
 
-        # FIXME
-
-        pass
+        return len(self._list)
         
     def empty(self):
         """Empty stack::
@@ -96,10 +94,12 @@ class Stack(object):
             >>> s.length()
             0
         """
-
-        # FIXME
-
-        pass
+        #Should the iter method contain multiple exceptions, like IndexError?
+        #Even though the below works, I get an IndexError that i'm poping from an
+        #empty list when I initially empty a list of many items. Am I doing this wrong?
+        
+        while True:
+            self._list.pop()
 
     def is_empty(self):
         """Is stack empty?
@@ -117,6 +117,7 @@ class Stack(object):
             False
         """
 
-        # FIXME
-
-        pass
+        if not self._list:
+            return True
+        else:
+            return False

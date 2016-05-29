@@ -97,9 +97,10 @@ class Stack(object):
         #Should the iter method contain multiple exceptions, like IndexError?
         #Even though the below works, I get an IndexError that i'm poping from an
         #empty list when I initially empty a list of many items. Am I doing this wrong?
-        
+
         while True:
             self._list.pop()
+
 
     def is_empty(self):
         """Is stack empty?

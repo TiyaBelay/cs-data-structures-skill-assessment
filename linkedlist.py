@@ -76,9 +76,11 @@ class LinkedList(object):
             fish
         """
 
-        # FIXME
+        current = self.head #Start by binding the head attribute to the variable current
 
-        pass
+        while current is not None: #Only evaluates the below when current is not empty
+            print current.data #prints the data of the node that is added first
+            current = current.next #moves over to the next attribute and runs through the while loop again
 
     def get_node_by_index(self, idx):
         """Return a node with the given index::
@@ -94,7 +96,15 @@ class LinkedList(object):
             >>> ll.get_node_by_index(2)
             <Node fish>
         """
+        #This isn't running for me. Not sure if i'm approaching this the right way
+        current = self.head
+        i = 0
 
-        # FIXME
+        while current is not None:
+            if i == idx:
+                current.data
+            else:
+                i += 1
+                current = current.next
 
-        pass
+

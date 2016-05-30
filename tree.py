@@ -26,9 +26,7 @@ class Node(object):
             2
         """
 
-        # FIXME
-
-        pass
+        return len(self.children)
 
 
 class Tree(object):
@@ -48,9 +46,15 @@ class Tree(object):
         Start at the root, and return None if not found.
         """
 
-        # FIXME
+        to_visit = [self.root] #start by binding the head parent to the variable to_visit
 
-        pass
+        while to_visit: #while to_visit is not None (if to_visit is empty, this entire function returns None)
+            node = to_visit.pop() #pops the head parent and binds it to the variable node (This pop() usually pops a node from the end of the list, hence uses a stack data structure)
+
+            if node.data == data: #if the head parent is equal to the data we're looking for then return it
+                return node
+
+            to_visit.extend(node.children) #if not, get the list of children for this node
 
     def breadth_first_search(self, data):
         """Return node object with this data, traversing the tree breadth-first.

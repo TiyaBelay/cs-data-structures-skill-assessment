@@ -1,0 +1,37 @@
+Part 1:
+
+    1) The workload is dependent on the number of iterations needed to go through n numbers in the list. The larger the list of integers, the closer it is to O(n).
+    2) Most efficient > Least efficient
+    Constant > Logarithmic > Linear > Logarithmic > Quadratic > Exponential 
+    O(1) >  O(log n) > O(n) >  O(n log n) > O(n^2)  > O(2^n)
+
+Stacks and Queues:
+    1) 
+        a. Stacks
+        b. Queues
+        c. Stacks
+
+    2) 
+        a. A line at the buffet. First come first serve!
+        b. Drive through
+    3) 
+        a. A deck of cards
+        b. The undo capability in all programs
+
+Linked lists:
+
+    1) 
+    • Each unit in the diagram is a node. There are 4 nodes in the diagram.
+    • The head is an attribute of LLIST and is found in the beginning of the LLIST
+    • The tail is also an attribute of the last node in the LLIST
+    • The unit on the left is where the attribute data lives and it usually carries the information that a node needs
+    • The unit on the right is the next attribute which points to the next node containing a data. When the next attribute has no node to point to, it results to None.
+    
+    
+    2) Singly linked list contain pointers to the next node whereas doubly linked list contain pointers to both the next node and the previous node and is therefore bidirectional.
+    3) If we add the tail attribute we'll be able to drastically optimize our code to have a constant runtime, hence O(1).
+
+Trees
+    1) Breadth-first search would navigate the tree based on each level, meaning it will visit the neighbor of each node before the children nodes. This will only go to the 2nd level in order to find the word 'burrito' and stops looking. This wins faster, starts from the left side and uses the data structure queue.
+    2) Depth-first search would navigate the tree by visiting the children of the nodes before it evaluates the neighbors.  This starts from the left side and uses the data structure stack.
+    3) Binary Search tree has nodes where each node has 2 children (left and right). This makes this type of binary search tree memory efficient with a runtime of O(log n).
